@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 新中式风格全局样式 */
+:root {
+  --font-noto-sans: 'Noto Sans SC', sans-serif;
+  --font-noto-serif: 'Noto Serif SC', serif;
+  --font-zcool-xiaowei: 'ZCOOL XiaoWei', serif;
+
+  /* 配色变量 */
+  --color-primary: #2C3E50;
+  --color-secondary: #1B3A4B;
+  --color-accent: #D4A84B;
+  --color-muted: #6B7B8A;
+  --color-bg: #FAF7F2;
+  --color-bg-paper: #F5F0E8;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-noto-sans);
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    line-height: 1.8;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-noto-serif);
+  }
+}
+
+@layer components {
+  /* 流线型装饰 */
+  .ink-flow-line {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(43, 62, 80, 0.1) 20%,
+      rgba(43, 62, 80, 0.3) 50%,
+      rgba(43, 62, 80, 0.1) 80%,
+      transparent 100%
+    );
+    height: 2px;
+    border-radius: 50%;
+  }
+
+  /* 宣纸纹理背景 */
+  .paper-bg {
+    background-color: var(--color-bg-paper);
+    background-image: url('/textures/paper-texture.png');
+    background-repeat: repeat;
+  }
+
+  /* 琥珀金按钮 */
+  .btn-accent {
+    @apply bg-accent text-white px-6 py-3 rounded-full font-medium transition-all duration-300;
+    @apply hover:bg-accent-dark hover:shadow-lg;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-accent::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease-out;
+  }
+
+  .btn-accent:hover::after {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  /* 卡片样式 */
+  .card-new-chinese {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300;
+    @apply hover:shadow-xl hover:-translate-y-1;
+    border: 1px solid rgba(212, 168, 75, 0.2);
+  }
+
+  /* 水墨渐变 */
+  .ink-gradient {
+    background: linear-gradient(
+      135deg,
+      rgba(43, 62, 80, 0.8) 0%,
+      rgba(27, 58, 75, 0.6) 50%,
+      rgba(212, 168, 75, 0.2) 100%
+    );
+  }
+}
+
+@layer utilities {
+  /* 文字阴影效果 */
+  .text-shadow-soft {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 隐藏滚动条 */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
