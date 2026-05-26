@@ -133,7 +133,7 @@ export default function Home() {
                 className="card-new-chinese p-8 text-center"
               >
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
-                  <span className="font-display text-2xl text-accent">{item.icon}</span>
+                  <span className="font-display text-xl text-accent">{item.icon}</span>
                 </div>
                 <h3 className="font-serif text-xl text-primary mb-2">{item.title}</h3>
                 <p className="text-muted text-sm">{item.desc}</p>
@@ -143,57 +143,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 视频预览区 */}
-      <section className="py-20 px-4 bg-bg-paper">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-serif text-3xl text-primary mb-2">精选视频</h2>
-            <div className="ink-flow-line w-24 mx-auto" />
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              { title: '太极球入门教学', category: '入门教学' },
-              { title: '名家表演精选', category: '名家表演' },
-            ].map((video, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="card-new-chinese aspect-video relative group cursor-pointer overflow-hidden"
-              >
-                {/* 视频封面占位 */}
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary to-primary" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-accent/50 transition-colors">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent">
-                  <span className="text-accent text-xs">{video.category}</span>
-                  <h3 className="text-white font-medium">{video.title}</h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link href="/videos" className="btn-accent">
-              查看更多视频
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      
       {/* 快速导航 */}
       <section className="py-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
