@@ -21,6 +21,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/会徽.png"
               alt="国际武术太极球联合会"

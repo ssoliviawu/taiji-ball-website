@@ -3,7 +3,14 @@
 import { motion } from 'framer-motion'
 
 // 数据将由后台管理
-const announcements: never[] = []
+type Announcement = {
+  id: string | number
+  type: string
+  title: string
+  date: string
+  content: string
+}
+const announcements: Announcement[] = []
 
 // 近期活动展示（带图片）
 const featuredEvents = [

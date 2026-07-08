@@ -207,6 +207,7 @@ export default function JoinPage() {
               className="card-new-chinese p-6 text-center"
             >
               <div className="w-24 h-24 mx-auto mb-4 bg-white rounded-lg overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/公众号二维码.jpg"
                   alt="微信公众号二维码"

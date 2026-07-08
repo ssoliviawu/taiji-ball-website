@@ -131,6 +131,7 @@ export default function AboutPage() {
               >
                 {/* 头像 */}
                 <div className="aspect-square overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`/images/${teacher.name}.jpg`}
                     alt={teacher.name}

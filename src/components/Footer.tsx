@@ -12,6 +12,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/images/footer.png" alt="IWTBF" className="w-full h-full object-cover" />
               </div>
               <span className="font-serif text-2xl">国际武术太极球联合会</span>
