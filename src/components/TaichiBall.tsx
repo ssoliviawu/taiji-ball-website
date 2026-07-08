@@ -31,6 +31,7 @@ export default function TaiChiBall({ className }: TaiChiBallProps) {
       {/* 太极球360度旋转展示 - 圆形容器 */}
       <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden animate-float">
         {taichiImages.map((src, index) => (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
             key={src}
             src={src}
