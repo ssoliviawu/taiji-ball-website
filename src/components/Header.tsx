@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 const navItems = [
   { name: '首页', path: '/' },
   { name: '协会介绍', path: '/about' },
+  { name: '功法介绍', path: '/practice' },
   { name: '视频中心', path: '/videos' },
   { name: '新闻活动', path: '/events' },
   { name: '加入我们', path: '/join' },

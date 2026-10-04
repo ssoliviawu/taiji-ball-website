@@ -19,71 +19,81 @@ export default function AboutPage() {
             </h1>
             <div className="ink-flow-line w-32 mx-auto mb-4" />
             <p className="text-white/80 max-w-xl mx-auto">
-              国际武术太极球联合会（IWTBF）
-总部设于中国香港，已完成联合国官方备案。是专注于太极球文化传承与国际化发展的非政府、非商业、非营利国际专业机构。
-本会以弘扬中华传统武学、推动太极球运动全球普及与规范发展为使命，独立运营、自主管理，拥有完善的行业标准、赛事体系与教练员、裁判员权威认证体系。
-作为全球太极球领域唯一联合国备案的权威引领机构，联合会致力于构建国际化、专业化、规范化的行业发展平台，促进全球武术文化交流互鉴，守护与提升中华武学的国际地位与影响力。
+              国际武术太极球联合会，是以传承中华太极文脉、建立标准化太极球功法体系、推动太极球运动全球普及、践行全民健康理念为核心宗旨的国际性武术专业组织。联合会以《28式太极球竞赛套路》和新编《精炼9式太极球》两大核心功法为载体，汇聚国内国际武林泰斗、体育院校专家教授、各大太极流派代表性传承人，构建集功法创编、人才培养、赛事认证、学术研究、文化传播、标准化建设、国际官网运营于一体的完整行业生态，致力于将太极球打造为兼具传统内功修炼、大众康养健身、专业竞技赛事三重属性的中华国粹运动，以武道联结世界，助力人类健康命运共同体建设。
             </p>
           </motion.div>
         </div>
       </section>
 
-  {/* 历史与理念 */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      {/* 太极球发展史 */}
+      <section className="py-20 px-4 bg-bg-paper">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="mb-16"
           >
             <h2 className="font-serif text-3xl text-primary text-center mb-8">
-              历史与理念
+              太极球发展史
             </h2>
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-8">
               <div className="card-new-chinese p-8">
-                <h3 className="font-serif text-xl text-accent mb-4">二十八式太极球套路</h3>
+                <h3 className="font-serif text-xl text-accent mb-4">一、远古雏形：道家养生与古武功力器具</h3>
                 <p className="text-muted leading-relaxed">
-                  太极球套路是依据易经、武术、天文星象、阴阳五行之理，结合中医经络学说，及丹道导引功法，与内家武学太极拳完美融合，凝聚民族传统智慧，挖掘整理创编而成；其内容蕴含阴阳哲理、符合人体结构，演绎宇宙运行规律，属于太极体系的升级套路。套路特点是拳功一体、练养结合，动作如行云流水、连绵不断，演练中犹如漫步于宇宙星空，道法自然、天人合一，充分展现了太极大道生生不息，无穷运转之玄妙。
+                  太极球雏形最早可追溯至唐宋道家修行体系，修道之人以天然石球、木球开展周身经络滚动、丹田导引训练，打通气血、调和阴阳，是最早的球体养生功法雏形；明清时期，陈氏、杨氏、武当等太极门派均将石球、铜球作为闭门内功、推手沾连粘随专项辅具，仅在门内嫡传，无统一名称、无成套标准化套路，传承零散、秘而不宣。
                 </p>
               </div>
               <div className="card-new-chinese p-8">
-                <h3 className="font-serif text-xl text-accent mb-4">健康益处</h3>
-                <ul className="text-muted space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-accent mr-2">·</span>
-                    增强肢体协调性和平衡感
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-2">·</span>
-                    改善心肺功能，促进血液循环
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-2">·</span>
-                    缓解压力，调节情绪，修身养性
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-2">·</span>
-                    锻炼专注力，提升身体觉知能力
-                  </li>
-                </ul>
+                <h3 className="font-serif text-xl text-accent mb-4">二、近代探索：民国太极球技法初步成型</h3>
+                <p className="text-muted leading-relaxed">
+                  民国时期，武术家许禹生率先以球体作为推手专项训练器材，形成单练、双人对练等基础模式；吴鉴泉弟子褚民谊正式定名&ldquo;太极球&rdquo;，创制悬挂式铜球训练法，太极球正式走入公开武术视野，但仍以零散功法、小众练习为主，始终缺少统一规范的完整套路体系。
+                </p>
+              </div>
+              <div className="card-new-chinese p-8">
+                <h3 className="font-serif text-xl text-accent mb-4">三、当代断层与革新契机</h3>
+                <p className="text-muted leading-relaxed">
+                  近现代数十年间，传统太极球功法流派繁杂、动作不一、轻重标准混乱，缺少权威理论支撑与竞赛规范，始终无法规模化推广。在此背景下，业内亟需一套兼顾传统拳理、人体工学、大众康养、竞技标准的官方统一套路，为太极球运动正名、定标、立脉，28式太极球、新编精炼9式太极球应运而生。
+                </p>
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
 
-          {/* 协会理念 */}
+      {/* 创立背景 */}
+      <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-bg-paper rounded-xl p-8 md:p-12"
           >
-            <h3 className="font-serif text-xl text-primary mb-6 text-center">协会核心理念</h3>
+            <h2 className="font-serif text-3xl text-primary text-center mb-6">创立背景</h2>
+            <div className="ink-flow-line w-24 mx-auto mb-8" />
+            <p className="text-muted leading-relaxed text-center md:text-lg">
+              为终结太极球行业杂乱无序的发展现状，搭建全球统一的管理、教学、赛事、认证平台，在中华武林泰斗、中国武术研究院专家委员会专家张山先生全程悉心指导下，由其入室弟子刘海全、张洁纯两位核心发起人，联合张保生、郑达柱、郑定朴、冯海校、李文军、张超等共同组建国际武术太极球联合会；同时吸纳全国多所体育院校教授、各太极拳流派代表性传承人组成专家顾问团，为功法创编、体系搭建提供权威学术支撑。
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+  {/* 联合会核心宗旨、使命、愿景 */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-bg-paper rounded-xl p-8 md:p-12"
+          >
+            <h3 className="font-serif text-2xl text-primary mb-6 text-center">联合会核心宗旨、使命、愿景</h3>
+            <div className="ink-flow-line w-24 mx-auto mb-8" />
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { title: '传承', desc: '弘扬传统太极文化，传承武术精髓' },
-                { title: '健康', desc: '倡导科学健身，追求身心健康' },
-                { title: '融合', desc: '传统与现代结合，理论与实践统一' },
+                { title: '宗旨', desc: '守正太极本源，创新功法体系；统一行业标准，规范教学赛事；普及康养武道，传承中华文脉。' },
+                { title: '使命', desc: '以28式太极球、新编精炼9式太极球为载体，传承上古圣贤道统，打通“易、武、医、道”四维合一的养生修炼路径，以武术健康文化联结全球。' },
+                { title: '愿景', desc: '打造全球最权威的太极球专业组织，让太极球成为全民康养标配运动、国际正式武术竞赛项目，助力构建人类健康命运共同体。' },
               ].map((item, idx) => (
                 <div key={idx} className="text-center">
                   <span className="font-display text-4xl text-accent block mb-2">{item.title}</span>
@@ -93,7 +103,7 @@ export default function AboutPage() {
             </div>
           </motion.div>
         </div>
-      </section> 
+      </section>
 
       {/* 师资名家 */}
       <section className="py-20 px-4 bg-bg-paper">
@@ -104,7 +114,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-serif text-3xl text-primary mb-2">师资名家</h2>
+            <h2 className="font-serif text-3xl text-primary mb-2">创始团队</h2>
             <div className="ink-flow-line w-24 mx-auto" />
           </motion.div>
 
@@ -119,6 +129,26 @@ export default function AboutPage() {
                 name: '张洁纯',
                 title: '协会副会长',
                 desc: '国家级社会体育指导；中国武术六段；国家健身气功一级裁判；师承中国武术泰斗国家体局总局武术研究院荣誉专家张山先生；青城太极传人。荣获全运会健身气功项目铜牌、全省健身气功赛事多项冠军，获评全球首届太极拳网络之星、2025武学百家年度影响力人物。'
+              },
+              {
+                name: '冯海校',
+                title: '联合创始人',
+                desc: '武术行业资深从业者，负责联合会组织架构搭建、分会管理、会员体系建设、资质认证规范制定，统筹全国各级分支机构标准化运营。'
+              },
+              {
+                name: '郑定朴',
+                title: '联合创始人',
+                desc: '传统武术文化研究学者，负责太极球文化溯源、拳理典籍整理、学术论文编撰，完善功法文化理论根基。'
+              },
+              {
+                name: '张山',
+                title: '终身首席顾问、功法总指导',
+                desc: '国内武术界泰斗、中国武术研究院专家委员会权威专家，全程把控28式太极球创编方向、拳理内核、动作科学性与武术规范性，审定全套竞赛标准、教材内容，为整个项目提供国家级权威背书，把控武道传承底线与行业发展格局。'
+              },
+              {
+                name: '专家顾问团',
+                title: '智库支持',
+                desc: '汇聚全国体育院校高校教授、陈式、杨式、吴式、武式、孙式六大太极拳流派代表性传承人、武术段位评审专家，形成多元、权威的学术智囊团队，保障功法科学、正统、兼容。'
               }
             ].map((teacher, idx) => (
               <motion.div

@@ -4,6 +4,7 @@ node_modules/
 # Next.js 构建
 .next/
 out/
+*.tsbuildinfo
 
 # 环境变量（包含敏感信息，绝对不能上传）
 .env

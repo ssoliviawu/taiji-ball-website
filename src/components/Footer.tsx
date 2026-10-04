@@ -18,7 +18,10 @@ export default function Footer() {
               <span className="font-serif text-2xl">国际武术太极球联合会</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed max-w-md">
-              传承太极文化精髓，推广太极球运动。以球演道，动静圆融，在旋转中感悟生命的韵律与和谐。
+              球转乾坤，循阴阳大道；拳承文脉，守华夏根魂。
+            </p>
+            <p className="text-gray-300 text-sm leading-relaxed max-w-md mt-3">
+              国际武术太极球联合会将始终坚守初心，以28式太极球、新编精炼9式太极球为两大核心载体，严守正统、科学、实用三大准则，深耕教学、赛事、文化、数字化传承四大领域，让古老太极球功法褪去神秘面纱，走进大众、走向世界，以武道康养惠及万千民众，以中华文脉助力世界文明健康共生，生生不息，薪火永续。
             </p>
           </div>
 
