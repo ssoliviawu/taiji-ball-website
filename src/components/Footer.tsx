@@ -35,13 +35,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/practice" className="text-gray-300 hover:text-accent transition-colors">
+                  功法介绍
+                </Link>
+              </li>
+              <li>
                 <Link href="/videos" className="text-gray-300 hover:text-accent transition-colors">
-                  视频教程
+                  视频中心
                 </Link>
               </li>
               <li>
                 <Link href="/events" className="text-gray-300 hover:text-accent transition-colors">
-                  活动公告
+                  新闻活动
                 </Link>
               </li>
               <li>

@@ -142,33 +142,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      
-      {/* 快速导航 */}
-      <section className="py-20 px-4 bg-background">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { name: '协会介绍', path: '/about', icon: 'About us' },
-              { name: '视频中心', path: '/videos', icon: 'Videos' },
-              { name: '新闻活动', path: '/events', icon: 'Events' },
-              { name: '加入我们', path: '/join', icon: 'Join us' },
-            ].map((item, idx) => (
-              <Link key={idx} href={item.path}>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  className="card-new-chinese p-6 text-center hover:bg-accent/5"
-                >
-                  <span className="font-display text-3xl text-accent block mb-2">{item.icon}</span>
-                  <span className="text-primary font-medium">{item.name}</span>
-                </motion.div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
