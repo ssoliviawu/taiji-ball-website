@@ -7,10 +7,34 @@ type Announcement = {
   id: string | number
   type: string
   title: string
+  tag?: string
   date: string
   content: string
+  details?: { label: string; value: string }[]
+  image?: string
+  url?: string
 }
-const announcements: Announcement[] = []
+const announcements: Announcement[] = [
+  {
+    id: 1,
+    type: '通知',
+    title: '中国政法大学｜国际体育裁判规则（太极球）高级研修班',
+    tag: '招募中',
+    date: '2026-11-28',
+    content:
+      '以武载道，以文润心，共建太极球标准化、国际化体系。',
+    details: [
+      { label: '时间', value: '2026年11月28日—29日' },
+      { label: '地点', value: '北京·昌平校区' },
+      { label: '课程', value: '28式太极球技法、国际裁判用语、竞赛规则、裁判法与教学理论' },
+      { label: '师资', value: '北体大、北京武协、中医药大学、国际武术太极球联合会资深导师' },
+      { label: '对象', value: '教练、体育教师、社体指导员、武术爱好者、高校学子' },
+      { label: '咨询', value: '冯老师 15383533388｜刘老师 18410409515' },
+    ],
+    image: '/images/20261128政法研修班.jpg',
+    url: 'https://mp.weixin.qq.com/s/5H8lrHFNPNohivmAss7s9w',
+  },
+]
 
 // 近期活动展示（带图片）
 const featuredEvents = [
@@ -97,12 +121,48 @@ export default function EventsPage() {
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
                       <span className="text-accent font-display text-sm">{item.type}</span>
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h3 className="font-medium text-primary">{item.title}</h3>
-                        <span className="text-xs text-muted">{item.date}</span>
+                    <div className="flex-1 flex flex-col md:flex-row md:items-start gap-4">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-2 mb-1">
+                          <h3 className="font-medium text-primary">
+                            {item.title}
+                            {item.tag && (
+                              <span className="ml-2 align-middle text-xs font-normal text-white bg-accent rounded-full px-2 py-0.5 whitespace-nowrap">
+                                {item.tag}
+                              </span>
+                            )}
+                          </h3>
+                        </div>
+                        <p className="text-muted text-sm">{item.content}</p>
+                        {item.details && item.details.length > 0 && (
+                          <dl className="mt-3 space-y-1">
+                            {item.details.map((d) => (
+                              <div key={d.label} className="flex gap-2 text-sm">
+                                <dt className="text-accent shrink-0">{d.label}</dt>
+                                <dd className="text-muted">{d.value}</dd>
+                              </div>
+                            ))}
+                          </dl>
+                        )}
+                        {item.url && (
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mt-2 text-xs text-accent hover:underline"
+                          >
+                            查看详情 ↗
+                          </a>
+                        )}
                       </div>
-                      <p className="text-muted text-sm">{item.content}</p>
+                      {item.image && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full md:w-56 lg:w-64 shrink-0 md:aspect-[3/4] object-contain bg-white rounded-lg"
+                        />
+                      )}
                     </div>
                   </div>
                 </motion.div>
